@@ -1,0 +1,121 @@
+from dataclasses import dataclass, field
+from datetime import datetime 
+from typing import Any 
+
+@dataclass
+class Event: 
+	timestamp: datetime
+	source: str
+	entity: str
+	event_type: str
+	attributes: dict[str, Any] = field(default_factory=dict)
+
+Note:  Below is just a list of possible values for this class, this is not a comprehensive listing.
+Possible Sources:
+•	Protect
+•	Zigbee
+•	home_assistant
+•	plex
+•	jellyfin
+•	sense
+•	Honeywell
+•	Roborock
+•	Roku
+•	unifi_lock
+•	josh
+•	mqtt
+•	manual system
+Possible Entities:
+•	porch_east
+•	front_door
+•	front_porch
+•	porch_west
+•	gate_east
+•	side_door
+•	backyard
+•	patio
+•	courtyard
+•	gate_west
+•	alley_gate
+•	east_gate 
+•	west_gate
+•	front_door
+•	laundry_door 
+•	master_door
+•	kitchen_slider
+•	shed_door
+•	doggy_door
+•	living_room_tv
+•	roku
+•	plex
+•	thermostat
+•	whole_home
+•	dryer
+•	washer
+•	dishwasher
+•	vacuum
+
+Possible Event Types
+
+•	smart_detection
+•	line_crossing
+•	motion 
+•	camera_online 
+•	camera_offline
+•	opened 
+•	closed 
+•	locked 
+•	unlocked
+•	media_started
+•	media_paused
+•	media_stopped
+•	media_completed 
+•	power_on 
+•	power_off
+•	device_detected 
+•	device_unknown
+•	mode_changed 
+•	setpoint_changed 
+•	fan_started 
+•	fan_stopped 
+•	cooling_started 
+•	cooling_stopped 
+•	heating_started 
+•	heating_stopped
+•	cleaning_started
+•	cleaning_completed 
+•	room_completed 
+•	docked 
+•	undocked 
+•	battery_low 
+•	error
+•	occupied 
+•	vacant 
+•	arrived 
+•	departed
+
+Possible Attributes
+•	object_type 
+•	zone 
+•	line 
+•	direction 
+•	confidence 
+•	thumbnail_path 
+•	event_id
+•	title 
+•	season 
+•	episode 
+•	artist 
+•	album 
+•	duration
+•	watts 
+•	kwh
+•	temperature 
+•	humidity 
+•	setpoint 
+•	mode
+•	room 
+•	area_cleaned 
+•	duration 
+•	battery_pct
+
